@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Electronics - Order</title>
+  <link rel="stylesheet" href="../css/service.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ===== Top Bar ===== -->
+  <div class="top-bar">
+    <p><i class="fas fa-envelope"></i> starelectronics201@gmail.com | <i class="fas fa-phone"></i> +92 324 3287065</p>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">Star Electronics</div>
+    <ul class="menu" id="menu">
+      <li><a href="home.html">Home</a></li>
+     <li><a href="about.html">About</a></li>
+ <li><a href="service.html">Services</a></li>
+     <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="active">Book Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+<section class="search-section">
+  <h2>Find & Book Your Service</h2>
+  <div class="search-container">
+    <input id="serviceSearch" type="text" placeholder="Search your service..." autocomplete="off" />
+    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+    <ul id="searchResults" class="search-results hidden"></ul>
+  </div>
+</section>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- <script src="search-dropdown.js"></script> -->
+
+
+  <!-- ===== Slider ===== -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://picsum.photos/1200/400?random=1" alt="Service 1" />
+      <img src="https://picsum.photos/1200/400?random=2" alt="Service 2" />
+      <img src="https://picsum.photos/1200/400?random=3" alt="Service 3" />
+      <!-- Duplicate for infinite scroll -->
+      <img src="https://picsum.photos/1200/400?random=1" alt="Service 1" />
+      <img src="https://picsum.photos/1200/400?random=2" alt="Service 2" />
+      <img src="https://picsum.photos/1200/400?random=3" alt="Service 3" />
+    </div>
+  </div>
+
+
+  <!-- ===== All Services ===== -->
+  <section class="all-services">
+    <h2>All Services</h2>
+    <div class="service-grid">
+      <div class="small-card" onclick="openService('chimney.html')">
+        <img src="https://picsum.photos/100?random=21" alt="Kitchen Hood (Chimney)">
+        <p>Kitchen Hood (Chimney)</p>
+      </div>
+      <div class="small-card" onclick="openService('microwave.html')">
+        <img src="https://picsum.photos/100?random=22" alt="Microwave Repair">
+        <p>Microwave Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('fryer.html')">
+        <img src="https://picsum.photos/100?random=22" alt="Microwave Repair">
+        <p>Air Fryer Repair</p>
+      </div>
+
+      <div class="small-card" onclick="openService('juicer.html')">
+        <img src="https://picsum.photos/100?random=23" alt="Juicer Machine Repair">
+        <p>Juicer Machine Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('sandwich.html')">
+        <img src="https://picsum.photos/100?random=24" alt="Sandwich Maker Repair">
+        <p>Sandwich Maker Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('kettle.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Electric Kettle Repair">
+        <p>Electric Kettle Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('mixer.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Blender Mixer Repair">
+        <p>Blender Mixer Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('bitter.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Hand Bitter Repair">
+        <p>Hand Bitter Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('toaster.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Toaster Repair">
+        <p>Toaster Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('stove.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Electric Stove Repair">
+        <p>Electric Stove Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('washing.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Washing Machine Repair">
+        <p>Washing Machine Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('fan.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Fan Repair">
+        <p>Fan Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('iron.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Iron Repair">
+        <p>Iron Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('steamiron.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Steam Iron Repair">
+        <p>Steam Iron Repair</p>
+      </div>
+       <div class="small-card" onclick="openService('water.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Water Motor Repair">
+        <p>Water Motor Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('monoblock.html')">
+        <img src="https://picsum.photos/100?random=25" alt="MonoBlock Repair">
+        <p>MonoBlock Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('vaccuum.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Vaccuum Cleaner Repair">
+        <p>Vaccuum Cleaner Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('katcher.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Katcher Repair">
+        <p>Karcher Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('hairdryer.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Hair Dryer Repair">
+        <p>Hair Dryer Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('hairstr.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Hair Straightner Repair">
+        <p>Hair Straightner Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('mosquito.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Mosquito Killer Repair">
+        <p>Mosquito Killer Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('blower.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Blower Repair">
+        <p>Blower Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('grinder.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Grinder Repair">
+        <p>Grinder Repair</p>
+      </div>
+      <div class="small-card" onclick="openService('drill.html')">
+        <img src="https://picsum.photos/100?random=25" alt="Drill Machine Repair">
+        <p>Drill Machine Repair</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Star Electronics | All Rights Reserved</p>
+  </footer>
+
+  <script src="../js/service.js"></script>
+</body>
+</html>

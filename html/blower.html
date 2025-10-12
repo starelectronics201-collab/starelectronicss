@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blower Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/blower.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1593642632559-0c7e1a7b9c89?auto=format&fit=crop&w=600&q=80" alt="Blower Repair" />
+  </section>
+
+  <section class="content">
+    <div class="description fade-in">
+      <h2>Professional Blower Repair & Maintenance</h2>
+      <p>
+        Get your blower running smoothly again with our expert repair and service support.
+      </p>
+      <p id="extraText" class="hidden">
+        We handle all types of blowers — hot air, vacuum, and industrial — fixing issues like low airflow, heating element failure, and motor jams. Enjoy powerful, efficient performance at your doorstep with Star Electronics’ trusted service.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Issue</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Not Turning On</span>
+        <input type="radio" name="service" value="Blower Not Turning On" />
+      </label>
+      <label class="service-card">
+        <span>Low or No Air Flow</span>
+        <input type="radio" name="service" value="Blower Low or No Air Flow" />
+      </label>
+      <label class="service-card">
+        <span>Heating Element Problem</span>
+        <input type="radio" name="service" value="Blower Heating Element Problem" />
+      </label>
+      <label class="service-card">
+        <span>Motor Noise / Jammed</span>
+        <input type="radio" name="service" value="Blower Motor Noise or Jammed" />
+      </label>
+      <label class="service-card">
+        <span>Smoke or Burning Smell</span>
+        <input type="radio" name="service" value="Blower Smoke or Burning Smell" />
+      </label>
+      <label class="service-card">
+        <span>Full Cleaning & Maintenance</span>
+        <input type="radio" name="service" value="Blower Full Cleaning and Maintenance" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/blower.js"></script>
+</body>
+</html>

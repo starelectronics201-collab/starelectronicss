@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Iron Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/iron.css" />
+</head>
+<body>
+
+  <section class="iron-hero">
+    <img src="https://picsum.photos/seed/iron/400/250" alt="Electric Iron Repair Service" />
+  </section>
+
+  <section class="iron-content">
+    <div class="description fade-in">
+      <h2>Professional Electric Iron Repair Service</h2>
+      <p>
+        Expert repair and maintenance service for all types of electric irons — dry, steam, and automatic models. 
+        Quick, reliable, and professional support at your doorstep.
+      </p>
+      <p id="extraText" class="hidden">
+        We handle heating problems, thermostat failures, wire damage, and power issues using original-grade parts. 
+        Our experienced technicians ensure smooth heat performance and extended iron life — with guaranteed satisfaction.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Issue or Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Iron Not Heating</span>
+        <input type="radio" name="service" value="Iron Not Heating" />
+      </label>
+      <label class="service-card">
+        <span>Steam Not Working</span>
+        <input type="radio" name="service" value="Steam Not Working" />
+      </label>
+      <label class="service-card">
+        <span>Wire or Plug Issue</span>
+        <input type="radio" name="service" value="Wire or Plug Issue" />
+      </label>
+      <label class="service-card">
+        <span>Thermostat or Temperature Problem</span>
+        <input type="radio" name="service" value="Thermostat or Temperature Problem" />
+      </label>
+      <label class="service-card">
+        <span>Complete Iron Not Working</span>
+        <input type="radio" name="service" value="Complete Iron Not Working" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/iron.js"></script>
+</body>
+</html>

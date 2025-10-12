@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toaster Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/toaster.css" />
+</head>
+<body>
+
+  <section class="toaster-hero">
+    <img src="https://picsum.photos/seed/toaster/400/250" alt="Toaster Repair" />
+  </section>
+
+  <section class="toaster-content">
+    <div class="description fade-in">
+      <h2>Professional Toaster Repair & Maintenance</h2>
+      <p>
+        Get your toaster fixed by certified experts — we ensure even heating, smooth pop-up function, and reliable performance.
+      </p>
+      <p id="extraText" class="hidden">
+        Whether your toaster isn’t heating, one side doesn’t work, or it’s not popping properly, our skilled technicians provide quick and effective repair. 
+        We use original parts to ensure lasting quality and safety in every service.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>No Heating / Not Working</span>
+        <input type="radio" name="service" value="Toaster Not Heating or Not Working" />
+      </label>
+      <label class="service-card">
+        <span>Uneven Heating / One Side Not Working</span>
+        <input type="radio" name="service" value="Toaster Uneven Heating or One Side Not Working" />
+      </label>
+      <label class="service-card">
+        <span>Pop-Up / Lever Issue</span>
+        <input type="radio" name="service" value="Toaster Pop-Up or Lever Problem" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/toaster.js"></script>
+</body>
+</html>

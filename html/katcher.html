@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karcher Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/katcher.css" />
+</head>
+<body>
+
+  <section class="karcher-hero">
+    <img src="https://picsum.photos/seed/karcher/400/250" alt="Karcher Service" />
+  </section>
+
+  <section class="karcher-content">
+    <div class="description fade-in">
+      <h2>Professional Karcher Service & Repair</h2>
+      <p>
+        Get your Karcher machine back to top performance with our expert repair and maintenance service.
+      </p>
+      <p id="extraText" class="hidden">
+        We provide full inspection, pressure testing, motor and pump repairs, and deep internal cleaning for all Karcher models. Reliable service to restore your washer’s power and efficiency — right at your doorstep.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Karcher Not Starting</span>
+        <input type="radio" name="service" value="Karcher Not Starting" />
+      </label>
+      <label class="service-card">
+        <span>Low Water Pressure</span>
+        <input type="radio" name="service" value="Karcher Low Pressure Issue" />
+      </label>
+      <label class="service-card">
+        <span>Full Service & Maintenance</span>
+        <input type="radio" name="service" value="Karcher Full Service & Maintenance" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/katcher.js"></script>
+</body>
+</html>

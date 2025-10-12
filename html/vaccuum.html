@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vacuum Cleaner Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/vaccuum.css" />
+</head>
+<body>
+
+  <section class="vacuum-hero">
+    <img src="https://picsum.photos/seed/vacuum/400/250" alt="Vacuum Cleaner Service" />
+  </section>
+
+  <section class="vacuum-content">
+    <div class="description fade-in">
+      <h2>Professional Vacuum Cleaner Repair & Maintenance</h2>
+      <p>
+        Get your vacuum cleaner working like new again with our expert repair and deep cleaning service.
+      </p>
+      <p id="extraText" class="hidden">
+        Whether your vacuum has low suction, power issues, or complete motor failure — our technicians quickly diagnose and fix it using genuine parts. We service all major brands and models, ensuring top cleaning performance and long life.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Vacuum Not Turning On</span>
+        <input type="radio" name="service" value="Vacuum Cleaner Not Turning On" />
+      </label>
+      <label class="service-card">
+        <span>Low Suction or Blockage</span>
+        <input type="radio" name="service" value="Vacuum Cleaner Low Suction or Blockage" />
+      </label>
+      <label class="service-card">
+        <span>Full Service & Cleaning</span>
+        <input type="radio" name="service" value="Vacuum Cleaner Full Service & Cleaning" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/vaccuum.js"></script>
+</body>
+</html>

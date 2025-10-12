@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandwich Maker Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/sandwich.css" />
+</head>
+<body>
+
+  <section class="sandwich-hero">
+    <img src="https://picsum.photos/seed/sandwich/400/250" alt="Sandwich Maker Repair" />
+  </section>
+
+  <section class="sandwich-content">
+    <div class="description fade-in">
+      <h2>Professional Sandwich Maker Repair & Service</h2>
+      <p>
+        Fast, affordable, and expert service for all sandwich maker brands and models — at your doorstep.
+      </p>
+      <p id="extraText" class="hidden">
+        Whether your sandwich maker isn’t heating, plates not closing properly, or power light isn’t turning on — our experts quickly diagnose and fix it using genuine parts and professional tools.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Not Heating</span>
+        <input type="radio" name="service" value="Sandwich Maker Not Heating" />
+      </label>
+      <label class="service-card">
+        <span>Power or Light Issue</span>
+        <input type="radio" name="service" value="Sandwich Maker Power or Light Issue" />
+      </label>
+      <label class="service-card">
+        <span>Hinge or Plate Problem</span>
+        <input type="radio" name="service" value="Sandwich Maker Hinge or Plate Problem" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/sandwich.js"></script>
+</body>
+</html>

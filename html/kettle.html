@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Kettle Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/kettle.css" />
+</head>
+<body>
+
+  <section class="kettle-hero">
+    <img src="https://picsum.photos/seed/kettle/400/250" alt="Electric Kettle Repair" />
+  </section>
+
+  <section class="kettle-content">
+    <div class="description fade-in">
+      <h2>Professional Electric Kettle Repair & Service</h2>
+      <p>
+        Fast, reliable, and affordable electric kettle repair — handled by certified technicians at your doorstep.
+      </p>
+      <p id="extraText" class="hidden">
+        We repair all major brands and models. Whether it’s not heating, auto-cut not working, or leaking water — our experts use genuine parts and ensure long-lasting performance.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Not Heating</span>
+        <input type="radio" name="service" value="Electric Kettle Not Heating" />
+      </label>
+      <label class="service-card">
+        <span>Auto Cut Not Working</span>
+        <input type="radio" name="service" value="Electric Kettle Auto Cut Problem" />
+      </label>
+      <label class="service-card">
+        <span>Water Leakage</span>
+        <input type="radio" name="service" value="Electric Kettle Water Leakage" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/kettle.js"></script>
+</body>
+</html>

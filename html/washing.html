@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Washing Machine Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/washing.css" />
+</head>
+<body>
+
+  <section class="washing-hero">
+    <img src="https://picsum.photos/seed/washingmachine/400/250" alt="Washing Machine Service" />
+  </section>
+
+  <section class="washing-content">
+    <div class="description fade-in">
+      <h2>Professional Washing Machine Repair & Service</h2>
+      <p>
+        Expert repair and maintenance for all washing machine brands to keep your laundry running smoothly.
+      </p>
+      <p id="extraText" class="hidden">
+        From drum issues and noise problems to complete overhauls — our certified technicians ensure fast, reliable, and affordable service. We specialize in both automatic and semi-automatic washing machines, right at your doorstep.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Washing Machine Not Working</span>
+        <input type="radio" name="service" value="Washing Machine Not Working" />
+      </label>
+      <label class="service-card">
+        <span>Spin/Drum Problem</span>
+        <input type="radio" name="service" value="Washing Machine Drum or Spin Issue" />
+      </label>
+      <label class="service-card">
+        <span>Full Service & Cleaning</span>
+        <input type="radio" name="service" value="Washing Machine Full Service & Cleaning" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/washing.js"></script>
+</body>
+</html>

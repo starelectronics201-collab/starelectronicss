@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microwave Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/microwave.css" />
+</head>
+<body>
+
+  <section class="microwave-hero">
+    <img src="https://picsum.photos/seed/microwave/400/250" alt="Microwave Service" />
+  </section>
+
+  <section class="microwave-content">
+    <div class="description fade-in">
+      <h2>Professional Microwave Repair & Service</h2>
+      <p>
+        Quick and reliable microwave repair at your doorstep. We fix all major brands and models for safe and efficient heating.
+      </p>
+      <p id="extraText" class="hidden">
+        From heating issues to power and panel faults, our experts use genuine parts and advanced tools to ensure long-lasting performance and safety.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Heating Problem</span>
+        <input type="radio" name="service" value="Microwave Heating Problem" />
+      </label>
+      <label class="service-card">
+        <span>Panel / Button Issue</span>
+        <input type="radio" name="service" value="Microwave Panel or Button Issue" />
+      </label>
+      <label class="service-card">
+        <span>Microwave Not Turning On</span>
+        <input type="radio" name="service" value="Microwave Not Turning On" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/microwave.js"></script>
+</body>
+</html>

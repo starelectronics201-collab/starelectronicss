@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Electronics - Home</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <p><i class="fas fa-envelope"></i> info@starelectronics.com | <i class="fas fa-phone"></i> +92 300 1234567</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Star Electronics</div>
+    <ul class="menu" id="menu">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+       <li><a href="index.html">Book Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="https://picsum.photos/1200/400?random=1" alt="Hero Image">
+    <div class="hero-text">
+      <h1>Professional Electronics Services</h1>
+      <p>We repair, clean, and maintain all major home electronics at your doorstep.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-section">
+    <img src="https://picsum.photos/1200/400?random=2" alt="About Star Electronics">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Star Electronics offers certified, fast, and reliable home electronics services.</p>
+      <p class="more-text hidden">We specialize in AC, Chimney, Microwave, Kettle, Washing Machine, and many more. Timely delivery, premium tools, and customer satisfaction guaranteed.</p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <!-- Trending Services -->
+  <section class="trending" id="services">
+    <div class="trend-header">
+      <h2>Popular Services</h2>
+      <a href="services.html" class="btn">Explore All Services</a>
+    </div>
+    <div class="trend-slider">
+      <div class="trend-card" onclick="window.location='ac.html'">
+        <img src="https://picsum.photos/1200/400?random=3" alt="AC Repair">
+        <h3>AC Repair</h3>
+      </div>
+      <div class="trend-card" onclick="window.location='chimney.html'">
+        <img src="https://picsum.photos/1200/400?random=4" alt="Chimney">
+        <h3>Chimney Service</h3>
+      </div>
+      <div class="trend-card" onclick="window.location='microwave.html'">
+        <img src="https://picsum.photos/1200/400?random=5" alt="Microwave">
+        <h3>Microwave Repair</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Service</h2>
+    <form id="serviceForm">
+      <input type="text" id="custName" placeholder="Your Name" required>
+      <input type="text" id="custContact" placeholder="Contact Number" required>
+      <input type="text" id="custWhatsApp" placeholder="WhatsApp Number (optional)">
+      <input type="email" id="custEmail" placeholder="Email (optional)">
+      <input type="text" id="custAddress" placeholder="Address">
+      <input type="text" id="custLocation" placeholder="Location">
+      <input type="date" id="serviceDate" required>
+      <input type="text" id="serviceSearch" placeholder="Select Service (e.g. AC Repair)">
+      <button type="submit">Book Now on WhatsApp & Email</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Star Electronics | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

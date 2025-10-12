@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimney Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/chimney.css" />
+</head>
+<body>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="chimney-hero">
+    <img src="https://picsum.photos/500/300?random=25" alt="Chimney Service" />
+  </section>
+
+  <!-- ===== Description ===== -->
+  <section class="chimney-content">
+    <div class="description fade-in">
+      <h2>Professional Chimney Service & Motor Repair</h2>
+      <p>
+        Keep your kitchen fresh and smoke-free with our professional chimney care. 
+    We clean, fix, and restore all types of chimneys for top performance.
+      </p>
+      <p id="extraText" class="hidden">
+        Our trained experts use advanced tools for deep cleaning, motor repair, and complete maintenance — ensuring better suction and longer life for your chimney.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <!-- ===== Service Selection ===== -->
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Chimney Cleaning (Oil & Dust Removal)</span>
+        <input type="radio" name="service" value="Chimney Cleaning" />
+      </label>
+      <label class="service-card">
+        <span>Chimney Not Working / Low Suction</span>
+        <input type="radio" name="service" value="Chimney Motor Repair" />
+      </label>
+      <label class="service-card">
+        <span>Complete Chimney Service (Cleaning + Repair)</span>
+        <input type="radio" name="service" value="Full Chimney Service" />
+      </label>
+    </div>
+  </section>
+
+  <!-- ===== Customer Info ===== -->
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Star Electronics — All Rights Reserved</p>
+  </footer>
+
+  <script src="../js/chimney.js"></script>
+</body>
+</html>
+

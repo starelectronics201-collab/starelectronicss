@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drill Machine Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/drill.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1581091870627-3b5c2de1c8f8?auto=format&fit=crop&w=600&q=80" alt="Drill Machine Repair" />
+  </section>
+
+  <section class="content">
+    <div class="description fade-in">
+      <h2>Professional Drill Machine Repair & Maintenance</h2>
+      <p>
+        Get your drill machine fixed quickly and professionally with Star Electronics.
+      </p>
+      <p id="extraText" class="hidden">
+        We repair all types of drill machines — hand drills, hammer drills, and cordless tools. 
+        Whether it's motor damage, power loss, overheating, or speed control issues, our technicians ensure reliable and long-lasting repair using genuine parts.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Issue</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Drill Not Working</span>
+        <input type="radio" name="service" value="Drill Machine Not Working" />
+      </label>
+      <label class="service-card">
+        <span>Low Power / Slow Speed</span>
+        <input type="radio" name="service" value="Drill Machine Low Power or Slow Speed" />
+      </label>
+      <label class="service-card">
+        <span>Trigger or Switch Fault</span>
+        <input type="radio" name="service" value="Drill Trigger or Switch Problem" />
+      </label>
+      <label class="service-card">
+        <span>Overheating or Burning Smell</span>
+        <input type="radio" name="service" value="Drill Overheating or Burning Smell" />
+      </label>
+      <label class="service-card">
+        <span>Chuck or Bit Slipping</span>
+        <input type="radio" name="service" value="Drill Chuck or Bit Slipping" />
+      </label>
+      <label class="service-card">
+        <span>Complete Service & Cleaning</span>
+        <input type="radio" name="service" value="Drill Machine Complete Cleaning and Maintenance" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/drill.js"></script>
+</body>
+</html>

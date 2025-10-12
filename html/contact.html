@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Star Electronics</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <p><i class="fas fa-envelope"></i> info@starelectronics.com | <i class="fas fa-phone"></i> +92 300 1234567</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Star Electronics</div>
+    <ul class="menu" id="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+       <li><a href="index.html">Book Now</a></li>
+
+    </ul>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- Contact Info -->
+  <section class="about-section">
+    <img src="images/contact.jpg" alt="Contact Star Electronics">
+    <div class="about-text">
+      <h2>Contact Us</h2>
+      <p>Reach out to us for any service or inquiry. We are here to assist you promptly and professionally.</p>
+      <p class="more-text hidden">Phone: +92 300 1234567<br>Email: info@starelectronics.com<br>Address: Your office or city address here.<br>We respond quickly to WhatsApp messages and emails for bookings or service requests.</p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Service</h2>
+    <form id="serviceForm">
+      <input type="text" id="custName" placeholder="Your Name" required>
+      <input type="text" id="custContact" placeholder="Contact Number" required>
+      <input type="text" id="custWhatsApp" placeholder="WhatsApp Number (optional)">
+      <input type="email" id="custEmail" placeholder="Email (optional)">
+      <input type="text" id="custAddress" placeholder="Address">
+      <input type="text" id="custLocation" placeholder="Location">
+      <input type="date" id="serviceDate" required>
+      <input type="text" id="serviceSearch" placeholder="Select Service (e.g. AC Repair)">
+      <button type="submit">Book Now on WhatsApp & Email</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Star Electronics | All Rights Reserved</p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

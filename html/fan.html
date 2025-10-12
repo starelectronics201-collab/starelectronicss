@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fan Repair Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/fan.css" />
+</head>
+<body>
+
+  <section class="fan-hero">
+    <img src="https://picsum.photos/seed/fan/400/250" alt="Fan Repair Service" />
+  </section>
+
+  <section class="fan-content">
+    <div class="description fade-in">
+      <h2>Expert Fan Repair & Maintenance</h2>
+      <p>
+        Professional repair service for all types of fans — ceiling, pedestal, bracket, and AC/DC fans. Reliable, fast, and affordable.
+      </p>
+      <p id="extraText" class="hidden">
+        From motor winding and capacitor replacement to noise issues or complete motor failure — our technicians handle every brand with care and precision. 
+        We ensure smooth performance, proper speed, and long-lasting reliability right at your doorstep.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Fan Type / Issue</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Ceiling Fan Repair</span>
+        <input type="radio" name="service" value="Ceiling Fan Repair" />
+      </label>
+      <label class="service-card">
+        <span>Pedestal Fan Repair</span>
+        <input type="radio" name="service" value="Pedestal Fan Repair" />
+      </label>
+      <label class="service-card">
+        <span>Bracket Fan Repair</span>
+        <input type="radio" name="service" value="Bracket Fan Repair" />
+      </label>
+      <label class="service-card">
+        <span>AC/DC Fan Repair</span>
+        <input type="radio" name="service" value="AC/DC Fan Repair" />
+      </label>
+      <label class="service-card">
+        <span>Fan Not Working / Motor Issue</span>
+        <input type="radio" name="service" value="Fan Motor or Not Working Issue" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/fan.js"></script>
+</body>
+</html>

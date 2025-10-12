@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Fryer Service | Star Electronics</title>
+  <link rel="stylesheet" href="../css/fryer.css" />
+</head>
+<body>
+
+  <!-- Hero Image -->
+  <section class="chimney-hero">
+    <img src="https://picsum.photos/100?random=50" alt="Air Fryer Service" />
+  </section>
+
+  <!-- Description -->
+  <section class="chimney-content">
+    <div class="description fade-in">
+      <h2>Professional Air Fryer Repair & Maintenance</h2>
+      <p>
+        Ensure your Air Fryer works perfectly with our expert service. We handle all brands and models efficiently.
+      </p>
+      <p id="extraText" class="hidden">
+        Our certified team offers heating element replacement, deep cleaning, and full servicing for optimal performance.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <!-- Service Options -->
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <div class="service-card">
+        <span>Heating Problem</span>
+        <input type="radio" name="service" value="Air Fryer Heating Problem" />
+      </div>
+      <div class="service-card">
+        <span>Panel Issue</span>
+        <input type="radio" name="service" value="Air Fryer Panel Issue" />
+      </div>
+      <div class="service-card">
+        <span>Full Servicing</span>
+        <input type="radio" name="service" value="Air Fryer Full Servicing" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Details & WhatsApp Booking -->
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/fryer.js"></script>
+</body>
+</html>

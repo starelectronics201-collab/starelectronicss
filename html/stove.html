@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Stove Repair | Star Electronics</title>
+  <link rel="stylesheet" href="../css/stove.css" />
+</head>
+<body>
+
+  <section class="stove-hero">
+    <img src="https://picsum.photos/seed/electricstove/400/250" alt="Electric Stove Repair" />
+  </section>
+
+  <section class="stove-content">
+    <div class="description fade-in">
+      <h2>Expert Electric Stove Repair & Maintenance</h2>
+      <p>
+        Reliable repair for all types of electric stoves — quick service, trusted technicians, and safe operation guaranteed.
+      </p>
+      <p id="extraText" class="hidden">
+        Whether your stove isn’t heating, trips the power, or has uneven burners, our experts diagnose and fix the issue professionally. 
+        We use genuine parts for long-lasting performance and safety assurance.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <label class="service-card">
+        <span>Stove Not Heating</span>
+        <input type="radio" name="service" value="Electric Stove Not Heating" />
+      </label>
+      <label class="service-card">
+        <span>Uneven or Slow Heating</span>
+        <input type="radio" name="service" value="Electric Stove Uneven or Slow Heating" />
+      </label>
+      <label class="service-card">
+        <span>Completely Not Working / Power Issue</span>
+        <input type="radio" name="service" value="Electric Stove Power or Complete Failure" />
+      </label>
+    </div>
+  </section>
+
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="../js/stove.js"></script>
+</body>
+</html>
