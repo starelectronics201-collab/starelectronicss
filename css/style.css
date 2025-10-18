@@ -232,6 +232,7 @@
 
 .slider {
   overflow: hidden;
+  position: relative;
   width: 100%;
   margin: 20px 0;
   border-radius: 12px;
@@ -240,8 +241,9 @@
 .slides {
   display: flex;
   gap: 15px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+  /* scroll-behavior: smooth; */
+  /* scrollbar-width: none; */
+  will-change: transform;
   transition: transform 1s ease-in-out;
 }
 
@@ -266,7 +268,7 @@
 /* ✅ MOBILE VIEW */
 @media (max-width: 768px) {
   .slide-item {
-    flex: 0 0 100%; /* only 1 visible at a time */
+    flex: 0 0 95%; /* only 1 visible at a time */
   }
   .slide-item video {
     height: 220px;

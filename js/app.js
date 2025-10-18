@@ -8,41 +8,25 @@
 
 const slidesContainer = document.querySelector(".slides");
 const slides = document.querySelectorAll(".slide-item");
+
 let index = 0;
+const totalSlides = slides.length;
 
-// Clone slides for smooth infinite scrolling
-slides.forEach(slide => {
-  const clone = slide.cloneNode(true);
-  slidesContainer.appendChild(clone);
-});
-
+// 🔁 Infinite clone disabled to prevent body scroll
 function moveSlider() {
   const isMobile = window.innerWidth <= 768;
-  const visibleSlides = isMobile ? 1 : 3; // ✅ 1 on mobile, 3 on PC
+  const visibleSlides = isMobile ? 1 : 3;
+
   index++;
-
-  slidesContainer.style.transition = "transform 1.2s ease-in-out";
-  slidesContainer.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
-
-  // ✅ Smooth infinite reset (no white flash)
-  if (index >= slides.length) {
-    setTimeout(() => {
-      slidesContainer.style.transition = "none";
-      index = 0;
-      slidesContainer.style.transform = "translateX(0)";
-    }, 1200);
+  if (index > totalSlides - visibleSlides) {
+    index = 0; // reset to start smoothly
   }
+
+  slidesContainer.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
 }
 
-// ✅ Slow speed for video clarity
-setInterval(moveSlider, 2500);
-
-// ✅ Fix layout reset on resize
-window.addEventListener("resize", () => {
-  slidesContainer.style.transition = "none";
-  index = 0;
-  slidesContainer.style.transform = "translateX(0)";
-});
+// ⏳ Slow down slider
+setInterval(moveSlider, 2500); // 7s per move
 
 // ===== Service Redirect =====
 function openService(pageName) {
