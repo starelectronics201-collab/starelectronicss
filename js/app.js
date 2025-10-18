@@ -18,26 +18,31 @@ slides.forEach(slide => {
 
 function moveSlider() {
   const isMobile = window.innerWidth <= 768;
-  const visibleSlides = isMobile ? 1 : 3; // now showing ~3 on PC
+  const visibleSlides = isMobile ? 1 : 3; // ✅ 1 on mobile, 3 on PC
   index++;
 
-  slidesContainer.style.transition = "transform 1s ease-in-out";
+  slidesContainer.style.transition = "transform 1.2s ease-in-out";
   slidesContainer.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
 
+  // ✅ Smooth infinite reset (no white flash)
   if (index >= slides.length) {
     setTimeout(() => {
       slidesContainer.style.transition = "none";
       index = 0;
       slidesContainer.style.transform = "translateX(0)";
-    }, 1000);
+    }, 1200);
   }
 }
 
-// Slow scroll so video visible clearly
-// setInterval(moveSlider, 8000);
+// ✅ Slow speed for video clarity
+setInterval(moveSlider, 2500);
 
-// ✅ Speed adjust (1000 = 1 second)
-setInterval(moveSlider, 1500);
+// ✅ Fix layout reset on resize
+window.addEventListener("resize", () => {
+  slidesContainer.style.transition = "none";
+  index = 0;
+  slidesContainer.style.transform = "translateX(0)";
+});
 
 // ===== Service Redirect =====
 function openService(pageName) {
