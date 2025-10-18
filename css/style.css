@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+img {
+  loading: lazy;
+}
 
 /* ===== Top Bar ===== */
 .top-bar {
@@ -271,7 +274,7 @@
     flex: 0 0 95%; /* only 1 visible at a time */
   }
   .slide-item video {
-    height: 220px;
+    height: 200px;
     border-radius: 10px;
   }
 }
