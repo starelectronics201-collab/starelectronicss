@@ -16,182 +16,196 @@
 
   <!-- ===== Navbar ===== -->
   <nav class="navbar">
-    <div class="logo">Star Electronics</div>
-    <ul class="menu" id="menu">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="service.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="index.html" class="active">Book Now</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <div class="logo">Star Electronics</div>
 
-  <section class="search-section">
-  <h2>Find & Book Your Service</h2>
-  <div class="search-container">
-    <input id="serviceSearch" type="text" placeholder="Search your service..." autocomplete="off" />
-    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
-    <ul id="searchResults" class="search-results hidden"></ul>
+  <ul class="menu" id="menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active">Book Now</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
   </div>
-</section>
+</nav>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!-- <script src="search-dropdown.js"></script> -->
 
+  <!-- ===== Search Section ===== -->
+  <section class="search-section">
+    <h2>Find & Book Your Service</h2>
+    <div class="search-container">
+      <input id="serviceSearch" type="text" placeholder="Search your service..." autocomplete="off" />
+      <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+      <ul id="searchResults" class="search-results hidden"></ul>
+    </div>
+  </section>
 
   <!-- ===== Slider ===== -->
   <div class="slider">
-    <div class="slides">
-      <img src="https://picsum.photos/1200/400?random=1" alt="Service 1" />
-      <img src="https://picsum.photos/1200/400?random=2" alt="Service 2" />
-      <img src="https://picsum.photos/1200/400?random=3" alt="Service 3" />
-      <!-- Duplicate for infinite scroll -->
-      <img src="https://picsum.photos/1200/400?random=1" alt="Service 1" />
-      <img src="https://picsum.photos/1200/400?random=2" alt="Service 2" />
-      <img src="https://picsum.photos/1200/400?random=3" alt="Service 3" />
+  <div class="slides">
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG2.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG3.Lp.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG4 (3).mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG4.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG4 (2).mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="slide-item">
+      <video autoplay muted loop playsinline>
+        <source src="images/OIG3.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
+</div>
 
   <!-- ===== Trending Services ===== -->
   <section class="trending">
     <div class="trend-header">
-      <h2>Trending Services</h2>
-      <a href="service.html" class="btn">View All Services</a>
+      <h2>Popular Services</h2>
+      <a href="service.html" class="btn">View All</a>
     </div>
     <div class="trend-slider">
       <div class="trend-card" onclick="openService('chimney.html')">
-        <img src="https://picsum.photos/200?random=11" alt="Kitchen Hood (Chimney) Repair">
-        <h3>Kitchen Hood (Chimney) Repair</h3>
-      </div>
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend1.png" alt="Chimney Repair">
+  <div class="trend-info">
+    <h3>Chimney Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
+
       <div class="trend-card" onclick="openService('microwave.html')">
-        <img src="https://picsum.photos/200?random=12" alt="Microwave Oven Repair">
-        <h3>Microwave Oven Repair</h3>
-      </div>
-      <div class="trend-card" onclick="openService('katcher.html')">
-        <img src="https://picsum.photos/200?random=13" alt="Katcher Repair">
-        <h3>Karcher Repair</h3>
-      </div>
-      <div class="trend-card" onclick="openService('washing.html')">
-        <img src="https://picsum.photos/200?random=14" alt="Washing Machine Repair">
-        <h3>Washing Machine Repair</h3>
-      </div>
-      <div class="trend-card" onclick="openService('vaccuum.html')">
-        <img src="https://picsum.photos/200?random=15" alt="Vaccuum Cleaner Repair">
-        <h3>Vaccuum Cleaner Repair</h3>
-      </div>
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend2.png" alt="microwave Repair">
+  <div class="trend-info">
+    <h3>Microwave Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
       <div class="trend-card" onclick="openService('fan.html')">
-        <img src="https://picsum.photos/200?random=15" alt="Fan Repair">
-        <h3>Fan Repair</h3>
-      </div>
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend3.png" alt="Fan Repair">
+  <div class="trend-info">
+    <h3>Fan Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
+      <div class="trend-card" onclick="openService('vaccuum.html')">
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend4.png" alt="vaccuum Repair">
+  <div class="trend-info">
+    <h3>Vaccuum Cleaner Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
+      <div class="trend-card" onclick="openService('washing.html')">
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend6.png" alt="washing Machine Repair">
+  <div class="trend-info">
+    <h3>Washing Machine Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
+      <div class="trend-card" onclick="openService('katcher.html')">
+  <div class="trend-tag">TRENDING</div>
+  <img src="images/trend5.png" alt="Karcher Repair">
+  <div class="trend-info">
+    <h3>Karcher Repair</h3>
+    <div class="rating-box">
+      <span class="stars">★★★★★</span>
+      <span class="score">4.5</span>
+    </div>
+  </div>
+</div>
+
     </div>
   </section>
 
   <!-- ===== All Services ===== -->
   <section class="all-services">
     <h2>All Services</h2>
+
     <div class="service-grid">
-      <div class="small-card" onclick="openService('chimney.html')">
-        <img src="https://picsum.photos/100?random=21" alt="Kitchen Hood (Chimney)">
-        <p>Kitchen Hood (Chimney)</p>
-      </div>
-      <div class="small-card" onclick="openService('microwave.html')">
-        <img src="https://picsum.photos/100?random=22" alt="Microwave Repair">
-        <p>Microwave Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('fryer.html')">
-        <img src="https://picsum.photos/100?random=22" alt="Microwave Repair">
-        <p>Air Fryer Repair</p>
+
+      <!-- Top 12 -->
+      <div class="small-card" onclick="openService('chimney.html')"><img src="images/chimnryyy.png"><h4>Kitchen Hood (Chimney) Repair</h4></div>
+      <div class="small-card" onclick="openService('microwave.html')"><img src="images/microooo.png"><h4>Microwave Repair</h4></div>
+      <div class="small-card" onclick="openService('fryer.html')"><img src="images/airrr.png"><h4>Air Fryer Repair</h4></div>
+      <div class="small-card" onclick="openService('washing.html')"><img src="images/washingg.png"><h4>Washing Machine Repair</h4></div>
+      <div class="small-card" onclick="openService('fan.html')"><img src="images/fannnnn.png"><h4>Fan Repair</h4></div>
+      <div class="small-card" onclick="openService('water.html')"><img src="images/waterrrr.png"><h4>Water Motor Repair</h4></div>
+      <div class="small-card" onclick="openService('mixer.html')"><img src="images/fooddd.png"><h4>Food Factory Repair</h4></div>
+      <div class="small-card" onclick="openService('aata.html')"><img src="images/ataaaaa.png"><h4>Aata Ghoondne Machine Repair</h4></div>
+      <div class="small-card" onclick="openService('commjuicer.html')"><img src="images/commjui.png"><h4>Commercial Juicer Repair</h4></div>
+      <div class="small-card" onclick="openService('steamiron.html')"><img src="images/steamerr.png"><h4>Clothes Steamer Repair</h4></div>
+      <div class="small-card" onclick="openService('vaccuum.html')"><img src="images/vacuumm.png"><h4>Vacuum Repair</h4></div>
+      <div class="small-card" onclick="openService('katcher.html')"><img src="images/karcherrrr.png"><h4>Pressure Washer (Karcher) Repair</h4></div>
+
+      <div class="view-all-card">
+        <button onclick="showMoreServices()">Explore All Services</button>
       </div>
 
-      <div class="small-card" onclick="openService('juicer.html')">
-        <img src="https://picsum.photos/100?random=23" alt="Juicer Machine Repair">
-        <p>Juicer Machine Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('sandwich.html')">
-        <img src="https://picsum.photos/100?random=24" alt="Sandwich Maker Repair">
-        <p>Sandwich Maker Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('kettle.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Electric Kettle Repair">
-        <p>Electric Kettle Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('mixer.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Blender Mixer Repair">
-        <p>Blender Mixer Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('bitter.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Hand Bitter Repair">
-        <p>Hand Bitter Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('toaster.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Toaster Repair">
-        <p>Toaster Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('stove.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Electric Stove Repair">
-        <p>Electric Stove Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('washing.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Washing Machine Repair">
-        <p>Washing Machine Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('fan.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Fan Repair">
-        <p>Fan Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('iron.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Iron Repair">
-        <p>Iron Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('steamiron.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Steam Iron Repair">
-        <p>Steam Iron Repair</p>
-      </div>
-       <div class="small-card" onclick="openService('water.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Water Motor Repair">
-        <p>Water Motor Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('monoblock.html')">
-        <img src="https://picsum.photos/100?random=25" alt="MonoBlock Repair">
-        <p>MonoBlock Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('vaccuum.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Vaccuum Cleaner Repair">
-        <p>Vaccuum Cleaner Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('katcher.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Katcher Repair">
-        <p>Karcher Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('hairdryer.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Hair Dryer Repair">
-        <p>Hair Dryer Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('hairstr.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Hair Straightner Repair">
-        <p>Hair Straightner Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('mosquito.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Mosquito Killer Repair">
-        <p>Mosquito Killer Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('blower.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Blower Repair">
-        <p>Blower Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('grinder.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Grinder Repair">
-        <p>Grinder Repair</p>
-      </div>
-      <div class="small-card" onclick="openService('drill.html')">
-        <img src="https://picsum.photos/100?random=25" alt="Drill Machine Repair">
-        <p>Drill Machine Repair</p>
-      </div>
+      <!-- Remaining services (hidden by default) -->
+      <div class="small-card" onclick="openService('commkettle.html')"><img src="images/comm kettle.png"><h4>Commercial Kettles Repair</h4></div>
+      <div class="small-card" onclick="openService('griller.html')"><img src="images/grillerr.png"><h4>Oven Toaster Griller Repair</h4></div>
+      <div class="small-card" onclick="openService('juicer.html')"><img src="images/juii.png"><h4>Juicer Machine Repair</h4></div>
+      <div class="small-card" onclick="openService('sandwich.html')"><img src="images/sanddd.png"><h4>Sandwich Maker Repair</h4></div>
+      <div class="small-card" onclick="openService('monoblock.html')"><img src="images/monooo.png"><h4>Monoblock Repair</h4></div>
+      <div class="small-card" onclick="openService('kettle.html')"><img src="images/kett.png"><h4>Electric Kettle Repair</h4></div>
+      <div class="small-card" onclick="openService('mosquito.html')"><img src="images/insect.png"><h4>Insect Killer Repair</h4></div>
+      <div class="small-card" onclick="openService('alumcutter.html')"><img src="images/cuttter.png"><h4>Aluminum Cutter Repair</h4></div>
+      <div class="small-card" onclick="openService('bitter.html')"><img src="images/beaterrr.png"><h4>Hand Beater Repair</h4></div>
+      <div class="small-card" onclick="openService('toaster.html')"><img src="images/toast.png"><h4>Bread Toaster Repair</h4></div>
+      <div class="small-card" onclick="openService('stove.html')"><img src="images/stovee.png"><h4>Electric Stove Repair</h4></div>
+      <div class="small-card" onclick="openService('iron.html')"><img src="images/ironnnn.png"><h4>Iron Repair</h4></div>
+      <div class="small-card" onclick="openService('hairdryer.html')"><img src="images/hairr.png"><h4>Hair Dryer Repair</h4></div>
+      <div class="small-card" onclick="openService('hairstr.html')"><img src="images/str.png"><h4>Hair Straightener Repair</h4></div>
+      <div class="small-card" onclick="openService('blower.html')"><img src="images/blowerrr.png"><h4>Blower Repair</h4></div>
+      <div class="small-card" onclick="openService('drill.html')"><img src="images/drillll.png"><h4>Drill Machine Repair</h4></div>
+      <div class="small-card" onclick="openService('grinder.html')"><img src="images/grinderrr.png"><h4>Grinder Repair</h4></div>
+
     </div>
   </section>
 
@@ -201,5 +215,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+
 </body>
 </html>

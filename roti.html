@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roti Maker Service | Star Electronics</title>
+  <link rel="stylesheet" href="css/microwave.css" />
+</head>
+<body>
+
+  <!-- Hero Image -->
+  <section class="microwave-hero">
+    <img src="images/roti.jpg" alt="Roti Maker Service" />
+  </section>
+
+  <!-- Description -->
+  <section class="microwave-content">
+    <div class="description fade-in">
+      <h2>Professional Roti Maker Repair & Maintenance</h2>
+      <p>
+        Get your Roti Maker working like new again! We handle heating, plate alignment, and wiring issues for all brands.
+      </p>
+      <p id="extraText" class="hidden">
+        Our experts fix non-heating plates, damaged cords, thermostat issues, and complete body servicing for long-lasting performance.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+
+  <!-- Service Options -->
+  <section class="service-section">
+    <h3>Select Your Service</h3>
+    <div class="service-cards">
+      <div class="service-card">
+        <span>Heating Problem</span>
+        <input type="radio" name="service" value="Roti Maker Heating Problem" />
+      </div>
+      <div class="service-card">
+        <span>Plate Not Closing Properly</span>
+        <input type="radio" name="service" value="Roti Maker Plate Alignment Issue" />
+      </div>
+      <div class="service-card">
+        <span>Wire or Plug Issue</span>
+        <input type="radio" name="service" value="Roti Maker Wire or Plug Issue" />
+      </div>
+      <div class="service-card">
+        <span>Full Servicing</span>
+        <input type="radio" name="service" value="Roti Maker Full Servicing" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Details -->
+  <section class="customer-details">
+    <input type="text" id="custName" placeholder="Your Name" />
+    <input type="text" id="custAddress" placeholder="Your Address" />
+    <input type="text" id="custLocation" placeholder="Your Location (optional)" />
+    <button id="getLocationBtn">📍 Get My Location</button>
+
+    <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
+  </section>
+
+  <script src="js/microwave.js"></script>
+</body>
+</html>

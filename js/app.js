@@ -1,41 +1,43 @@
 // ===== Mobile Menu Toggle =====
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
+// const hamburger = document.getElementById("hamburger");
+// const menu = document.getElementById("menu");
 
-hamburger.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+// hamburger.addEventListener("click", () => {
+//   menu.classList.toggle("active");
+// });
 
-// ===== Infinite Slider =====
 const slidesContainer = document.querySelector(".slides");
-const slides = document.querySelectorAll(".slides img");
+const slides = document.querySelectorAll(".slide-item");
+let index = 0;
 
-// Clone slides to make infinite loop
+// Clone slides for smooth infinite scrolling
 slides.forEach(slide => {
   const clone = slide.cloneNode(true);
   slidesContainer.appendChild(clone);
 });
 
-let currentIndex = 0;
-let slideWidth = slides[0].clientWidth + 20; // 20px gap between slides
-
 function moveSlider() {
-  currentIndex++;
-  slidesContainer.style.transition = "transform 0.3s linear";
-  slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  const isMobile = window.innerWidth <= 768;
+  const visibleSlides = isMobile ? 1 : 3; // now showing ~3 on PC
+  index++;
 
-  // Reset to start for infinite loop
-  if (currentIndex >= slides.length) {
+  slidesContainer.style.transition = "transform 1s ease-in-out";
+  slidesContainer.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+
+  if (index >= slides.length) {
     setTimeout(() => {
       slidesContainer.style.transition = "none";
-      currentIndex = 0;
-      slidesContainer.style.transform = `translateX(0px)`;
-    }, 300);
+      index = 0;
+      slidesContainer.style.transform = "translateX(0)";
+    }, 1000);
   }
 }
 
-// Faster auto slide
-setInterval(moveSlider, 1000);
+// Slow scroll so video visible clearly
+// setInterval(moveSlider, 8000);
+
+// ✅ Speed adjust (1000 = 1 second)
+setInterval(moveSlider, 1500);
 
 // ===== Service Redirect =====
 function openService(pageName) {
@@ -47,11 +49,17 @@ function openService(pageName) {
 document.addEventListener("DOMContentLoaded", () => {
   // Only the services you added as cards
   const services = [
-    { name: "AC Service", page: "ac.html" },
-    { name: "Fan Repair", page: "fan.html" },
-    { name: "Chimney Service", page: "chimney.html" },
+    { name: "Kitchen Hood (Chimney) Service", page: "chimney.html" },
     { name: "Microwave Repair", page: "microwave.html" },
-    { name: "Washing Machine", page: "washing-machine.html" }
+    { name: "Commercial Juicer Repair", page: "commjuicer.html" },
+    { name: "Aata Ghoondne Machine Repair", page: "aata.html" },
+    { name: "Fan Repair", page: "fan.html" },
+    { name: "Vaccuum Cleaner Repair", page: "vaccuum.html" },
+    { name: "Washing Machine", page: "washing-machine.html" },
+    { name: "Food Factory Repair", page: "mixer.html" },
+    { name: "Pressure Washer (Karcher) Repair", page: "katcher.html" },
+    { name: "Air Fryer Repair", page: "fryer.html" },
+    { name: "Clothes Steamer Repair", page: "steamiron.html" },
     // Add only the services you created pages for
   ];
 
@@ -155,6 +163,24 @@ Schedule: ${schedule}`
 });
 
 
- 
+
+function showMoreServices() {
+    const newServices = document.querySelectorAll('.all-services .small-card:nth-child(n+13)');
+    newServices.forEach(card => card.style.display = 'block');
+    document.querySelector('.view-all-card').style.display = 'none';
+  }
+
+  // Initially hide additional services
+  document.addEventListener('DOMContentLoaded', () => {
+    const newServices = document.querySelectorAll('.all-services .small-card:nth-child(n+13)');
+    newServices.forEach(card => card.style.display = 'none');
+  });
 
 
+  function toggleMenu(x) {
+  x.classList.toggle("change");
+
+  document.getElementById("menu").classList,toggle("active")
+}
+
+// https://wa.me/923243287065?text=Hi%20Star%20Electronics!%20I%20want%20to%20book%20a%20service.

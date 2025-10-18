@@ -3,51 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steam Iron Repair | Star Electronics</title>
-  <link rel="stylesheet" href="css/steamiron.css" />
+  <title>Clothes Steamer Service | Star Electronics</title>
+  <link rel="stylesheet" href="css/microwave.css" />
 </head>
 <body>
 
-  <section class="iron-hero">
-    <img src="https://images.unsplash.com/photo-1616627454530-8a0eec3ad63b?auto=format&fit=crop&w=600&q=80" alt="Steam Iron Repair Service" />
+  <section class="microwave-hero">
+    <img src="images/steamer.jpg" alt="Clothes Steamer Service" />
   </section>
 
-  <section class="iron-content">
+  <section class="microwave-content">
     <div class="description fade-in">
-      <h2>Professional Steam Iron Repair & Service</h2>
+      <h2>Expert Clothes Steamer & Steam Iron Repair</h2>
       <p>
-        Get your steam iron working like new again! We repair and service all brands with expert care and quick response.
+        Restore your clothes steamer or iron to perfect condition with our professional repair service.
       </p>
       <p id="extraText" class="hidden">
-        Our technicians fix heating issues, steam blockage, thermostat faults, and water leakage using premium parts — ensuring smooth performance and longer life for your iron.
+        We fix heating, steam pressure, leakage, and wiring issues quickly to make your ironing hassle-free.
       </p>
       <button id="readMoreBtn">Read More</button>
     </div>
   </section>
 
   <section class="service-section">
-    <h3>Select Issue or Service</h3>
+    <h3>Select Your Service</h3>
     <div class="service-cards">
-      <label class="service-card">
-        <span>Iron Not Heating</span>
-        <input type="radio" name="service" value="Steam Iron Not Heating" />
-      </label>
-      <label class="service-card">
-        <span>No Steam / Steam Blockage</span>
-        <input type="radio" name="service" value="No Steam or Steam Blockage" />
-      </label>
-      <label class="service-card">
-        <span>Water Leakage Problem</span>
-        <input type="radio" name="service" value="Water Leakage Problem" />
-      </label>
-      <label class="service-card">
-        <span>Thermostat / Temperature Issue</span>
-        <input type="radio" name="service" value="Thermostat or Temperature Issue" />
-      </label>
-      <label class="service-card">
-        <span>Iron Completely Dead</span>
-        <input type="radio" name="service" value="Steam Iron Completely Dead" />
-      </label>
+      <div class="service-card">
+        <span>No Steam / Low Steam</span>
+        <input type="radio" name="service" value="Clothes Steamer No Steam" />
+      </div>
+      <div class="service-card">
+        <span>Water Leakage</span>
+        <input type="radio" name="service" value="Clothes Steamer Leakage" />
+      </div>
+      <div class="service-card">
+        <span>Heating Problem</span>
+        <input type="radio" name="service" value="Clothes Steamer Heating Issue" />
+      </div>
+      <div class="service-card">
+        <span>Power or Wiring Issue</span>
+        <input type="radio" name="service" value="Clothes Steamer Power Issue" />
+      </div>
     </div>
   </section>
 
@@ -56,10 +52,9 @@
     <input type="text" id="custAddress" placeholder="Your Address" />
     <input type="text" id="custLocation" placeholder="Your Location (optional)" />
     <button id="getLocationBtn">📍 Get My Location</button>
-
     <button id="bookNowBtn" disabled>Book Now on WhatsApp</button>
   </section>
 
-  <script src="js/steamiron.js"></script>
+  <script src="js/microwave.js"></script>
 </body>
 </html>
