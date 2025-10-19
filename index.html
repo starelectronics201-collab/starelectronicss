@@ -6,6 +6,44 @@
   <title>Star Electronics - Order</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* WhatsApp Floating Button Override to ensure topmost layer */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99999 !important; /* Highest priority */
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 65px;
+        left: 265px;
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -214,7 +252,12 @@
     <p>© 2025 Star Electronics | All Rights Reserved</p>
   </footer>
 
+   <a href="https://wa.me/923243287065" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a> 
+
   <script src="js/app.js"></script>
+  
 
 </body>
 </html>
