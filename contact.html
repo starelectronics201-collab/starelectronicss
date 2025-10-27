@@ -1,64 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Star Electronics</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Electronics - Order</title>
+  <link rel="stylesheet" href="css/contact.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* WhatsApp Floating Button Override to ensure topmost layer */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99999 !important; /* Highest priority */
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 47px;
+        left: 296px;
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- ===== Top Bar ===== -->
   <div class="top-bar">
-    <p><i class="fas fa-envelope"></i> info@starelectronics.com | <i class="fas fa-phone"></i> +92 300 1234567</p>
+    <p><i class="fas fa-envelope"></i> starelectronics201@gmail.com | <i class="fas fa-phone"></i> +92 324 3287065</p>
   </div>
 
-  <!-- Navbar -->
+  <!-- ===== Navbar ===== -->
   <nav class="navbar">
-    <div class="logo">Star Electronics</div>
-    <ul class="menu" id="menu">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="service.html">Services</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-       <li><a href="index.html">Book Now</a></li>
+  <div class="logo">Star Electronics</div>
 
-    </ul>
-    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-  </nav>
+  <ul class="menu" id="menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active">Book Now</a></li>
+  </ul>
 
-  <!-- Contact Info -->
-  <section class="about-section">
-    <img src="images/contact.jpg" alt="Contact Star Electronics">
-    <div class="about-text">
-      <h2>Contact Us</h2>
-      <p>Reach out to us for any service or inquiry. We are here to assist you promptly and professionally.</p>
-      <p class="more-text hidden">Phone: +92 300 1234567<br>Email: info@starelectronics.com<br>Address: Your office or city address here.<br>We respond quickly to WhatsApp messages and emails for bookings or service requests.</p>
-      <button id="readMoreBtn">Read More</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div>
+      <h1>Contact Us</h1>
+      <p>Book your appliance repair or get in touch with our support team</p>
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <section class="booking-form">
-    <h2>Book Your Service</h2>
-    <form id="serviceForm">
-      <input type="text" id="custName" placeholder="Your Name" required>
-      <input type="text" id="custContact" placeholder="Contact Number" required>
-      <input type="text" id="custWhatsApp" placeholder="WhatsApp Number (optional)">
-      <input type="email" id="custEmail" placeholder="Email (optional)">
-      <input type="text" id="custAddress" placeholder="Address">
-      <input type="text" id="custLocation" placeholder="Location">
-      <input type="date" id="serviceDate" required>
-      <input type="text" id="serviceSearch" placeholder="Select Service (e.g. AC Repair)">
-      <button type="submit">Book Now on WhatsApp & Email</button>
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <form class="contact-form" id="contactForm">
+      <h2>Get in Touch</h2>
+
+      <div class="form-group">
+        <div class="half">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="Enter your name" />
+        </div>
+        <div class="half">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" required placeholder="03XX-XXXXXXX" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="half">
+          <label for="area">Select Area</label>
+          <select id="area" required>
+            <option value="">-- Select Your Area --</option>
+            <optgroup label="Popular Areas">
+              <option>North Nazimabad</option>
+              <option>Gulshan-e-Maymar</option>
+              <option>Naya Nazimabad</option>
+              <option>Shadman</option>
+              <option>Bufferzone</option>
+              <option>FB Area</option>
+              <option>Nagan Chowrangi</option>
+              <option>North Karachi</option>
+            </optgroup>
+            <optgroup label="Nearby Societies">
+              <option>Hadiabad Society</option>
+              <option>Alhamd Town</option>
+              <option>Salfia Society</option>
+              <option>Rainbow Tower</option>
+              <option>Chapal Uptown</option>
+              <option>Television Society</option>
+              <option>Ptv Society</option>
+              <option>Masriqi Society</option>
+              <option>Aligarh Society</option>
+              <option>Etawah Society</option>
+              <option>Marriot Society</option>
+              <option>Gulshan-e-Ghazian</option>
+              <option>Green Vista Society</option>
+              <option>Diamond City</option>
+              <option>Diamond Terrace</option>
+              <option>Garden City</option>
+              <option>Multi Color Society</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="half">
+          <label for="appliance">Select Appliance</label>
+          <select id="appliance" required>
+            <option value="">-- Select Appliance --</option>
+            <option>Air Fryer</option>
+            <option>Microwave Oven</option>
+            <option>Kitchen Hood (Chimney)</option>
+            <option>Washing Machine</option>
+            <option>Water Dispenser</option>
+            <option>Food Factory</option>
+            <option>Juicer Blender</option>
+            <option>Hand Blender</option>
+            <option>Iron</option>
+            <option>Electric Kettle</option>
+            <option>Fan</option>
+            <option>Karcher Cleaner</option>
+            <option>Vacuum Cleaner</option>
+            <option>Dough Kneading Machine</option>
+            <option>Toaster</option>
+            <option>Sandwich Maker</option>
+            <option>Geyser</option>
+            <option>Cooler</option>
+            <option>Heater</option>
+            <option>Grinder</option>
+            <option>Electric Stove</option>
+            <option>Air Cooler</option>
+            <option>Steam Iron</option>
+            <option>Juicer Machine</option>
+            <option>Oven Toaster Grill</option>
+            <option>Room Cooler</option>
+            <option>Exhaust Fan</option>
+            <option>Electric Motor</option>
+            <option>Inverter Fan</option>
+            <option>Dryer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group full">
+        <label for="message">Describe the Issue</label>
+        <textarea id="message" placeholder="Write a short description about your appliance issue..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send on WhatsApp</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Star Electronics | All Rights Reserved</p>
+    <p>© 2025 Star Electronics. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const area = document.getElementById("area").value;
+      const appliance = document.getElementById("appliance").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappMsg = `Hi Star Electronics,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Area: ${area}%0A
+Appliance: ${appliance}%0A
+Issue: ${message}%0A`;
+
+      const url = `https://wa.me/923243287065?text=${whatsappMsg}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+
+
 </body>
+
 </html>

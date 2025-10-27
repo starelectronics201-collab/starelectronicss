@@ -1,49 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Star Electronics</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Electronics - Order</title>
+  <link rel="stylesheet" href="css/about.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* WhatsApp Floating Button Override to ensure topmost layer */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99999 !important; /* Highest priority */
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 47px;
+        left: 296px;
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- ===== Top Bar ===== -->
   <div class="top-bar">
-    <p><i class="fas fa-envelope"></i> info@starelectronics.com | <i class="fas fa-phone"></i> +92 300 1234567</p>
+    <p><i class="fas fa-envelope"></i> starelectronics201@gmail.com | <i class="fas fa-phone"></i> +92 324 3287065</p>
   </div>
 
-  <!-- Navbar -->
+  <!-- ===== Navbar ===== -->
   <nav class="navbar">
-    <div class="logo">Star Electronics</div>
-    <ul class="menu" id="menu">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="service.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-       <li><a href="index.html">Book Now</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-  </nav>
+  <div class="logo">Star Electronics</div>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <img src="images/about.jpg" alt="About Star Electronics">
-    <div class="about-text">
-      <h2>About Star Electronics</h2>
-      <p>We are a certified home electronics service provider, committed to delivering fast and reliable repair and maintenance services.</p>
-      <p class="more-text hidden">Our expertise covers ACs, Chimneys, Microwaves, Kettles, Washing Machines, Fans, Irons, and many more. We use premium tools, certified spare parts, and provide doorstep service for your convenience. Customer satisfaction and timely service are our top priorities.</p>
-      <button id="readMoreBtn">Read More</button>
+  <ul class="menu" id="menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active">Book Now</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</nav>
+<!-- ===== Hero Section ===== -->
+  <section class="about-hero">
+    <div class="overlay">
+      <h1>About Star Electronics</h1>
+      <p>Trusted Home Appliance Repair & Maintenance Experts in Karachi</p>
     </div>
   </section>
 
-  
+  <!-- ===== About Content ===== -->
+  <section class="about-content">
+    <h2>Who We Are</h2>
+    <p>
+      <strong>Star Electronics</strong> is a Karachi-based appliance repair and maintenance company built on trust, quality, and reliability. 
+      For years, we’ve been serving thousands of households across the city with quick and professional home service — fixing everything from small kitchen gadgets to large household appliances. 
+      We take pride in being a one-stop solution for every repair need, helping customers save time, energy, and money with expert care.
+    </p>
 
+    <h2>Our Expertise</h2>
+    <p>
+      Our team includes certified technicians with deep experience in repairing 
+      <strong>Air Fryers, Microwaves, Washing Machines, Fans, Kitchen Chimneys, Karcher Cleaners, Vacuum Cleaners, Food Factories, Blenders, and more.</strong> 
+      Every service is handled with precision using the latest diagnostic tools and genuine spare parts to ensure long-lasting performance.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      At Star Electronics, our mission is to make appliance repair easy, affordable, and accessible for everyone in Karachi. 
+      We focus on delivering convenience through professional home visits, transparent pricing, and reliable after-service support. 
+      Our customers choose us because we stand by our work — every repair comes with guaranteed satisfaction.
+    </p>
+
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>✅ Experienced & background-verified technicians</li>
+      <li>✅ Fast and efficient home service across Karachi</li>
+      <li>✅ Use of genuine and high-quality spare parts</li>
+      <li>✅ Transparent pricing with no hidden charges</li>
+      <li>✅ Same-day service available for urgent repairs</li>
+      <li>✅ 100% customer satisfaction guaranteed</li>
+    </ul>
+
+    <h2>Our Vision</h2>
+    <p>
+      Our vision is to build Pakistan’s most trusted appliance repair network — powered by honesty, innovation, and exceptional service. 
+      We aim to make every home in Karachi run smoothly with appliances that work better and last longer. 
+      With Star Electronics, you get peace of mind, professionalism, and performance every single time.
+    </p>
+
+    <h2>Our Service Areas</h2>
+    <p>
+      We proudly serve all key areas of Karachi including <strong>North Nazimabad, Gulshan-e-Maymar, Naya Nazimabad, Shadman, Bufferzone, FB Area, Nagan Chowrangi, and nearby societies.</strong> 
+      Our goal is to reach you fast — wherever you are — with dependable home service and customer-first support.
+    </p>
+  </section>
+
+  <!-- ===== Footer ===== -->
   <footer>
-    <p>© 2025 Star Electronics | All Rights Reserved</p>
+    <p>© 2025 Star Electronics. All Rights Reserved.</p>
   </footer>
+<script src="js/home.js"></script>
 
-  <script src="js/app.js"></script>
 </body>
 </html>

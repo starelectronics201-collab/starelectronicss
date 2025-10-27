@@ -1,95 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Electronics - Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Electronics - Order</title>
+  <link rel="stylesheet" href="css/home.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* WhatsApp Floating Button Override to ensure topmost layer */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99999 !important; /* Highest priority */
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 47px;
+        left: 296px;
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- ===== Top Bar ===== -->
   <div class="top-bar">
-    <p><i class="fas fa-envelope"></i> info@starelectronics.com | <i class="fas fa-phone"></i> +92 300 1234567</p>
+    <p><i class="fas fa-envelope"></i> starelectronics201@gmail.com | <i class="fas fa-phone"></i> +92 324 3287065</p>
   </div>
 
-  <!-- Navbar -->
+  <!-- ===== Navbar ===== -->
   <nav class="navbar">
-    <div class="logo">Star Electronics</div>
-    <ul class="menu" id="menu">
-      <li><a href="home.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="service.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-       <li><a href="index.html">Book Now</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-  </nav>
+  <div class="logo">Star Electronics</div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <img src="https://picsum.photos/1200/400?random=1" alt="Hero Image">
-    <div class="hero-text">
-      <h1>Professional Electronics Services</h1>
-      <p>We repair, clean, and maintain all major home electronics at your doorstep.</p>
-      <a href="#services" class="btn">Explore Services</a>
-    </div>
-  </section>
+  <ul class="menu" id="menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active">Book Now</a></li>
+  </ul>
 
-  <!-- About Preview -->
-  <section class="about-section">
-    <img src="https://picsum.photos/1200/400?random=2" alt="About Star Electronics">
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>Star Electronics offers certified, fast, and reliable home electronics services.</p>
-      <p class="more-text hidden">We specialize in AC, Chimney, Microwave, Kettle, Washing Machine, and many more. Timely delivery, premium tools, and customer satisfaction guaranteed.</p>
-      <button id="readMoreBtn">Read More</button>
-    </div>
-  </section>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</nav>
 
-  <!-- Trending Services -->
-  <section class="trending" id="services">
-    <div class="trend-header">
-      <h2>Popular Services</h2>
-      <a href="services.html" class="btn">Explore All Services</a>
+<!-- ===== Hero Section ===== -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Home Appliance Repair & Service</h1>
+    <p class="slogan">Fast, Reliable, At Your Doorstep</p>
+    <p class="description">
+      Professional repair, cleaning & installation for all brands and models.
+    </p>
+    <div class="home-service">Home Service Available</div>
+    <div class="hero-buttons">
+      <a href="all-services.html" class="btn explore">Explore All Services</a>
+      <a href="https://wa.me/923243287065?text=Hi%20Star%20Electronics,%20I%20want%20to%20book%20a%20service" target="_blank" class="btn book">Book Now</a>
     </div>
-    <div class="trend-slider">
-      <div class="trend-card" onclick="window.location='ac.html'">
-        <img src="https://picsum.photos/1200/400?random=3" alt="AC Repair">
-        <h3>AC Repair</h3>
+  </div>
+
+  <div class="hero-right">
+  <div class="slider">
+    <div class="slider-row">
+      <img id="img1" src="images/img1.png" alt="Image 1">
+      <img id="img2" src="images/img2.png" alt="Image 2">
+    </div>
+    <div class="slider-row">
+      <img id="img3" src="images/img3.png" alt="Image 3">
+      <img id="img4" src="images/img4.png" alt="Image 4">
+    </div>
+  </div>
+</div>
+
+<!-- ===== Services Section ===== -->
+<section class="services">
+  <div class="service-cards">
+    <div class="card">
+      <div class="card-left">
+        <img src="images/microooo.png" alt="Microwave Repair">
       </div>
-      <div class="trend-card" onclick="window.location='chimney.html'">
-        <img src="https://picsum.photos/1200/400?random=4" alt="Chimney">
-        <h3>Chimney Service</h3>
-      </div>
-      <div class="trend-card" onclick="window.location='microwave.html'">
-        <img src="https://picsum.photos/1200/400?random=5" alt="Microwave">
+      <div class="card-right">
         <h3>Microwave Repair</h3>
+        <p>Expert repair and maintenance for all microwave models.</p>
+        <a href="https://wa.me/923243287065?text=Hi Star Electronics, I want to book a service" target="_blank" class="btn book-now">Book Now</a>
       </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <img src="images/chimnryyy.png" alt="Kitchen Hood Repair">
+      </div>
+      <div class="card-right">
+        <h3>Kitchen Hood (Chimney) Repair</h3>
+        <p>Professional repair service for all kitchen hood brands.</p>
+        <a href="https://wa.me/923243287065?text=Hi Star Electronics, I want to book a service" target="_blank" class="btn book-now">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <img src="images/fannn.png" alt="Fan Repair">
+      </div>
+      <div class="card-right">
+        <h3>Fan Repair</h3>
+        <p>Quick and reliable fan repair for home and office.</p>
+        <a href="https://wa.me/923243287065?text=Hi Star Electronics, I want to book a service" target="_blank" class="btn book-now">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <img src="images/washingg.png" alt="Washing Machine Repair">
+      </div>
+      <div class="card-right">
+        <h3>Washing Machine Repair</h3>
+        <p>Professional washing machine repair service for all brands.</p>
+        <a href="https://wa.me/923243287065?text=Hi Star Electronics, I want to book a service" target="_blank" class="btn book-now">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="explore-btn">
+    <a href="all-services.html" class="btn explore-all">Explore All Services</a>
+  </div>
+</section>
+
+
+<!-- ===== Home Appliance Section ===== -->
+  <section class="home-appliance-section">
+
+    <!-- Main Paragraph Card -->
+    <div class="main-appliance-card">
+      <h2>Home Appliance Repair</h2>
+      <p>
+        At Star Electronics, we specialize in repairing a wide range of home appliances. From daily-use gadgets to major machines, our expert technicians provide fast, reliable, and long-lasting service at your doorstep.
+      </p>
+    </div>
+
+    <!-- Individual Appliance Cards -->
+    <div class="appliance-cards">
+  <!-- Microwave -->
+  <div class="appliance-card">
+    <img src="images/microooo.png" alt="Microwave Repair">
+    <h3>Microwave Repair</h3>
+    <p>Expert repair for all brands of microwave ovens. We fix heating issues, display problems, door or button malfunctions, and ensure safe and efficient operation. Our team also provides cleaning and maintenance tips to prolong your microwave's life.</p>
+  </div>
+
+  <!-- Chimney -->
+  <div class="appliance-card">
+    <img src="images/chimnryyy.png" alt="Kitchen Hood (Chimney) Repair">
+    <h3>Kitchen Hood (Chimney) Repair</h3>
+    <p>Professional repair for kitchen chimneys. We clean and fix suction, motor, and electrical issues. Ensure proper ventilation in your kitchen while removing grease, smoke, and odors efficiently. Regular maintenance services available for long-term performance.</p>
+  </div>
+
+ 
+  <!-- Washing Machine -->
+  <div class="appliance-card">
+    <img src="images/washingg.png" alt="Washing Machine Repair">
+    <h3>Washing Machine Repair</h3>
+    <p>Professional repair for all washing machine brands. We handle drum, motor, electrical, and water leakage issues for perfect cleaning performance. Our team also provides installation checks, detergent guidance, and preventive maintenance tips.</p>
+  </div>
+</div>
+
+
+    <!-- Explore All Services Button -->
+    <div style="margin-top: 30px; text-align: center;">
+      <a href="all-services.html" class="btn explore-all">Explore All Services</a>
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <section class="booking-form">
-    <h2>Book Your Service</h2>
-    <form id="serviceForm">
-      <input type="text" id="custName" placeholder="Your Name" required>
-      <input type="text" id="custContact" placeholder="Contact Number" required>
-      <input type="text" id="custWhatsApp" placeholder="WhatsApp Number (optional)">
-      <input type="email" id="custEmail" placeholder="Email (optional)">
-      <input type="text" id="custAddress" placeholder="Address">
-      <input type="text" id="custLocation" placeholder="Location">
-      <input type="date" id="serviceDate" required>
-      <input type="text" id="serviceSearch" placeholder="Select Service (e.g. AC Repair)">
-      <button type="submit">Book Now on WhatsApp & Email</button>
+  <div class="reviews-slider-wrapper">
+  <div class="reviews-slider">
+    <!-- Original Cards -->
+    <div class="review-card">
+      <p>"Excellent service! My microwave was repaired quickly and works perfectly."</p>
+      <h4>Ali Khan</h4>
+      <span>North Nazimabad, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Professional and punctual. Chimney cleaning and repair done efficiently."</p>
+      <h4>Hina Shah</h4>
+      <span>Gulshan-e-Maymar, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Fan repair service was excellent. My fan works like new."</p>
+      <h4>Ahmed Raza</h4>
+      <span>North Karachi, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Washing machine repair was done on time. Very satisfied."</p>
+      <h4>Sana Malik</h4>
+      <span>Shadman, Karachi</span>
+    </div>
+
+    <!-- Duplicate Cards for seamless loop -->
+    <div class="review-card">
+      <p>"Excellent service! My microwave was repaired quickly and works perfectly."</p>
+      <h4>Ali Khan</h4>
+      <span>North Nazimabad, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Professional and punctual. Chimney cleaning and repair done efficiently."</p>
+      <h4>Hina Shah</h4>
+      <span>Gulshan-e-Maymar, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Fan repair service was excellent. My fan works like new."</p>
+      <h4>Ahmed Raza</h4>
+      <span>North Karachi, Karachi</span>
+    </div>
+    <div class="review-card">
+      <p>"Washing machine repair was done on time. Very satisfied."</p>
+      <h4>Sana Malik</h4>
+      <span>Shadman, Karachi</span>
+    </div>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-card">
+    <h2>Contact Star Electronics</h2>
+    <form>
+      <!-- Row 1 -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+92-XXX-XXXXXXX" required>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Your Address" required>
+      </div>
+      <div class="form-group">
+        <label for="area">Area</label>
+        <select id="area" multiple>
+          <!-- Popular Areas on top -->
+          <option value="gulshan e maymar">Gulshan e Maymar</option>
+          <option value="north nazimabad">North Nazimabad</option>
+          <option value="naya nazimabad">Naya Nazimabad</option>
+          <option value="nagan">Nagan</option>
+          <option value="shadman">Shadman</option>
+          <option value="up more">UP More</option>
+          <option value="north karachi">North Karachi</option>
+          <option value="bufferzone">Bufferzone</option>
+          <option value="incholi">Incholi</option>
+          <option value="fb area">FB Area</option>
+          <option value="cotton society">Cotton Society</option>
+          <option value="hadiabad society">Hadiabad Society</option>
+          <option value="merat society">Merat Society</option>
+          <option value="gulshan e ghazian">Gulshan e Ghazian</option>
+          <option value="shahnawaz society">Shahnawaz Society</option>
+          <option value="rainbow tower">Rainbow Tower</option>
+          <option value="masriqi society">Masriqi Society</option>
+          <option value="atawa society">Atawa Society</option>
+          <option value="aligarh society">Aligarh Society</option>
+          <option value="ptv society">PTV Society</option>
+          <option value="television society">Television Society</option>
+          <option value="chapal uptown">Chapal Uptown</option>
+          <option value="salfia society">Salfia Society</option>
+          <option value="alhamd town">Alhamd Town</option>
+          <!-- Nazimabad Blocks -->
+          <option value="nazimabad 1">Nazimabad No 1</option>
+          <option value="nazimabad 2">Nazimabad No 2</option>
+          <option value="nazimabad 3">Nazimabad No 3</option>
+          <option value="nazimabad 4">Nazimabad No 4</option>
+          <option value="nazimabad 5">Nazimabad No 5</option>
+          <option value="nazimabad block A">Nazimabad Block A</option>
+          <option value="nazimabad block B">Nazimabad Block B</option>
+          <option value="nazimabad block C">Nazimabad Block C</option>
+          <option value="nazimabad block D">Nazimabad Block D</option>
+          <option value="nazimabad block E">Nazimabad Block E</option>
+          <option value="nazimabad block F">Nazimabad Block F</option>
+          <option value="nazimabad block G">Nazimabad Block G</option>
+          <option value="nazimabad block H">Nazimabad Block H</option>
+          <option value="nazimabad block I">Nazimabad Block I</option>
+          <option value="nazimabad block J">Nazimabad Block J</option>
+          <option value="nazimabad block K">Nazimabad Block K</option>
+          <option value="nazimabad block L">Nazimabad Block L</option>
+          <option value="nazimabad block M">Nazimabad Block M</option>
+          <option value="nazimabad block N">Nazimabad Block N</option>
+        </select>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="form-group" style="flex:1 1 100%;">
+        <label for="appliances">Appliances</label>
+        <select id="appliances" multiple>
+          <option>Microwave</option>
+          <option>Kitchen Hood (Chimney)</option>
+          <option>Fan</option>
+          <option>Washing Machine</option>
+          <option>Karcher</option>
+          <option>Vaccuum</option>
+          <option>Air Fryer</option>
+          <option>Dough Kneading Machine</option>
+          <option>Water Dispenser</option>
+          <option>Juicer</option>
+          <option>Food Processor</option>
+          <option>Refrigerator</option>
+          <option>Oven</option>
+          <option>Dishwasher</option>
+          <option>Electric Kettle</option>
+          <!-- Add any other appliances you offer -->
+        </select>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="form-group" style="flex:1 1 100%;">
+        <label for="message">Message / Description</label>
+        <textarea id="message" placeholder="Write your message here..." rows="4"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">Submit</button>
     </form>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Star Electronics | All Rights Reserved</p>
-  </footer>
 
-  <script src="js/app.js"></script>
+<script src="js/home.js"></script>
+
 </body>
 </html>

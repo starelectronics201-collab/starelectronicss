@@ -1,0 +1,165 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+  background: #004aad;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #004aad;
+}
+
+/* ===== Menu ===== */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #004aad;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #004aad;
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+.change .bar1 { transform: translate(0, 9px) rotate(-45deg); }
+.change .bar2 { opacity: 0; }
+.change .bar3 { transform: translate(0, -9px) rotate(45deg); }
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 330px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+  }
+  .menu.active { right: 0; }
+  .hamburger { display: block; }
+  .menu li { margin: 1px 0; font-size: larger; }
+  .menu li a { padding: 1px 0; display: block; }
+  .menu li a:hover { color: #004aad; }
+}
+
+
+/* ===== Hero Section ===== */
+.about-hero {
+  text-align: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #004aad, #0077cc);
+  color: #fff;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ===== Content Section ===== */
+.about-content {
+  padding: 70px 10%;
+  background: #f8faff;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-content h2 {
+  color: #004aad;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  margin-top: 40px;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.about-content ul {
+  margin-left: 20px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: #004aad;
+  color: white;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 50px 7%;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+}

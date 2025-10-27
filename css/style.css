@@ -1270,3 +1270,112 @@ footer {
     height: 28px;
   }
 }
+ 
+/* home css */
+
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    body { background-color: #0a2f5b; color: #fff; }
+
+    /* Container */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 10%;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    /* Left content */
+    .hero-left {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-left p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #cfd8dc;
+    }
+
+    /* Info boxes */
+    .info-boxes {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .info-box {
+        background: #0f3c78;
+        padding: 15px 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        min-width: 160px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s;
+    }
+
+    .info-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .info-box span {
+        font-size: 1.3rem;
+    }
+
+    /* Right content */
+    .hero-right {
+        flex: 1;
+        min-width: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-right .placeholder {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        background: #1b4a90;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #cfd8dc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            padding: 40px 5%;
+            gap: 30px;
+        }
+
+        .hero-left h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero-left p {
+            font-size: 1rem;
+        }
+
+        .info-boxes {
+            flex-direction: column;
+        }
+
+        .info-box {
+            min-width: 100%;
+        }
+    }
