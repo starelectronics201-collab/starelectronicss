@@ -357,7 +357,7 @@ img {
   padding: 18px 22px;
   width: 100%;
   max-width: 350px;
-  height: 160px;
+  height: 200px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -369,7 +369,7 @@ img {
 .trend-card img {
   width: 45%;
   height: 100%;
-  object-fit: contain;
+  object-fit:cover;
   border-radius: 10px;
 }
 
@@ -583,10 +583,6 @@ footer {
     width: 80%;
   }
 
-  .trend-card {
-    /* flex: 0 0 70%; */
-    /* max-width: 70%; */
-  }
 
   .service-grid {
     max-height: none;
@@ -1379,3 +1375,17 @@ footer {
             min-width: 100%;
         }
     }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
