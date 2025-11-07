@@ -357,7 +357,7 @@ img {
   padding: 18px 22px;
   width: 100%;
   max-width: 350px;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -530,6 +530,11 @@ img {
   .small-card p {
     font-size: 0.8rem;
   }
+
+  .trend-header h2 {
+  color: lightblue;
+}
+
 }
 
 /* Extra small phones (1 per row) */
@@ -852,7 +857,7 @@ a {
 }
 
 .trend-header h2 {
-  color: #004aad;
+  /* color: #004aad; */
 }
 
 .trend-header .btn {
@@ -1047,6 +1052,7 @@ footer {
     /* max-width: 100%; */
     /* width: 850px;     */
     scroll-snap-align: start;
+    /* width: auto; */
     
   }
 }
@@ -1269,7 +1275,7 @@ footer {
  
 /* home css */
 
-    /* Reset & base */
+  /* Reset & base */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
     body { background-color: #0a2f5b; color: #fff; }
 
@@ -1373,6 +1379,10 @@ footer {
 
         .info-box {
             min-width: 100%;
+        }
+
+        h4{
+          color: #000;
         }
     }
 
