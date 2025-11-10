@@ -623,7 +623,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   background: #004aad;
-  color: #fff;
+  color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 6px;
@@ -650,6 +650,7 @@ footer {
   margin: 5px 0 0 0;
   transition: all 0.3s ease;
   z-index: 100;
+  color: #000;
 }
 
 .search-results li {
