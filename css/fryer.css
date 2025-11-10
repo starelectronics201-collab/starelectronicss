@@ -149,3 +149,43 @@ footer {
   font-size: 13px;
   color: #666;
 }
+/* ===== Modern Home Button (Top Left Corner) ===== */
+.home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15px;
+  left: 15px; /* Left side */
+  width: 40px;
+  height: 40px;
+  background: #004aad;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%; /* circular */
+  font-size: 20px; /* arrow size */
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.3s ease, transform 0.2s ease, background 0.3s ease;
+  z-index: 9999;
+}
+
+.home-btn:hover {
+  background: #003580;
+  transform: scale(1.15) rotate(-10deg); /* slight rotation for effect */
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .home-btn {
+    top: 12px;
+    left: 12px;
+    width: 50px;    /* bada kiya */
+    height: 50px;   /* bada kiya */
+    font-size: 24px; /* arrow size bhi bada kiya */
+  }
+
+  .home-btn:hover {
+    transform: scale(1.1) rotate(-10deg);
+  }
+}
